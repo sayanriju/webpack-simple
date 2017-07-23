@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'vue-app',
+  name: "VueApp",
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: "Welcome to Your Vue.js App"
     }
   }
 }

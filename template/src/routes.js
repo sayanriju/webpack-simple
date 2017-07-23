@@ -13,6 +13,6 @@ export default new Router({
     { path: "/home", name: "homepage", component: Home, alias: "/" },
     { path: "/login", name: "loginpage", component: Login },
 
-    { path: "*", name: "fourzerofour", component: FourZeroFour },
+    { path: "*", name: "404", component: FourZeroFour },
   ]
 })

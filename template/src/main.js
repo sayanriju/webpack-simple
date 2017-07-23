@@ -20,10 +20,12 @@ Vue.use(VueAuthenticate, {
   bindRequestInterceptor() {
     this.$http.interceptors.request.use((axiosConfig) => {
       if (this.isAuthenticated()) {
+	// eslint-disable-next-line
         axiosConfig.headers["Authorization"] = [
           this.options.tokenType, this.getToken()
         ].join(" ")
       } else {
+	// eslint-disable-next-line
         delete axiosConfig.headers["Authorization"]
       }
       return axiosConfig
