@@ -3,16 +3,16 @@ import axios from "axios"
 import VueAxios from "vue-axios"
 import VueAuthenticate from "vue-authenticate"
 
-import config from "./config"
-import routes from "./routes"
+import Config from "./config"
+import Router from "./routes"
 
 import App from "./App.vue"
 
 Vue.use(VueAxios)
 Vue.use(VueAuthenticate, {
-  baseUrl: config.apiRoot, // Your API domain
+  baseUrl: Config.apiRoot, // Your API domain
   loginUrl: "/login",
-  tokenName: config.tokenName,
+  tokenName: Config.tokenName,
 
   // Stuff to make it work with Axios (until vue-authenticate uses axios as official instead of vue-resource)
   requestDataKey: "data",
@@ -41,7 +41,7 @@ Vue.use(VueAuthenticate, {
 
 
 new Vue({   // eslint-disable-line
-  routes,
+  Router,
   el: "#app",
   render: h => h(App),
 })
