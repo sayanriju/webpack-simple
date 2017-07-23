@@ -8,7 +8,7 @@ import Router from "./routes"
 
 import App from "./App.vue"
 
-Vue.use(VueAxios)
+Vue.use(VueAxios, axios)
 Vue.use(VueAuthenticate, {
   baseUrl: Config.apiRoot, // Your API domain
   loginUrl: "/login",
@@ -42,6 +42,6 @@ Vue.use(VueAuthenticate, {
 
 new Vue({   // eslint-disable-line
   Router,
-  el: "#app",
+  el: "#vue-app",
   render: h => h(App),
 })
