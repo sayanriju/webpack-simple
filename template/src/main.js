@@ -8,6 +8,7 @@ import router from "./routes"
 
 import App from "./App.vue"
 
+axios.defaults.baseURL = config.apiRoot
 Vue.use(VueAxios, axios)
 Vue.use(VueAuthenticate, {
   baseUrl: config.apiRoot, // Your API domain
